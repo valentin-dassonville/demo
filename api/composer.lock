@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8b7728f4941ccbfca268d0f96487cf8b",
+    "content-hash": "ca9be864cb776d2df0c3b2e39368dbe0",
     "packages": [
         {
             "name": "api-platform/core",
-            "version": "v4.0.6",
+            "version": "dev-fix/hydra-context-static-asset",
             "source": {
                 "type": "git",
-                "url": "https://github.com/api-platform/core.git",
-                "reference": "001d77174b7217433a5e16c4405c052bddf35334"
+                "url": "https://github.com/valentin-dassonville/core.git",
+                "reference": "045429773cf2b01ea8dbb2492281e779b5abb747"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/api-platform/core/zipball/001d77174b7217433a5e16c4405c052bddf35334",
-                "reference": "001d77174b7217433a5e16c4405c052bddf35334",
+                "url": "https://api.github.com/repos/valentin-dassonville/core/zipball/045429773cf2b01ea8dbb2492281e779b5abb747",
+                "reference": "045429773cf2b01ea8dbb2492281e779b5abb747",
                 "shasum": ""
             },
             "require": {
@@ -185,7 +185,12 @@
                     "ApiPlatform\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "ApiPlatform\\Tests\\": "tests/",
+                    "App\\": "tests/Fixtures/app/var/tmp/src/"
+                }
+            },
             "license": [
                 "MIT"
             ],
@@ -199,23 +204,22 @@
             "description": "Build a fully-featured hypermedia or GraphQL API in minutes!",
             "homepage": "https://api-platform.com",
             "keywords": [
+                "API",
+                "GraphQL",
+                "HAL",
                 "Hydra",
                 "JSON-LD",
-                "api",
-                "graphql",
-                "hal",
-                "jsonapi",
-                "laravel",
-                "openapi",
-                "rest",
-                "swagger",
-                "symfony"
+                "JSONAPI",
+                "Laravel",
+                "OpenAPI",
+                "REST",
+                "Swagger",
+                "Symfony"
             ],
             "support": {
-                "issues": "https://github.com/api-platform/core/issues",
-                "source": "https://github.com/api-platform/core/tree/v4.0.6"
+                "source": "https://github.com/valentin-dassonville/core/tree/fix/hydra-context-static-asset"
             },
-            "time": "2024-10-28T10:08:29+00:00"
+            "time": "2024-10-30T13:34:35+00:00"
         },
         {
             "name": "brick/math",
@@ -10292,7 +10296,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "api-platform/core": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
